@@ -1,0 +1,10 @@
+<div class="container">
+  <%= link_to "New", new_pet_path, class: "btn btn-primary" %>
+    <h1><%= @pet.name %></h1>
+    <p><%= @pet.address  %></p>
+    <p><%=  @pet.species %></p>
+    <p><%= @pet.found_on %> </p>
+    <%= link_to "back", pets_path, class:"btn btn-primary"  %>
+    <%= link_to "Edit", edit_pet_path(@pet), class:"btn btn-info" %>
+    <%= link_to "Delete", pet_path(@pet), method: :delete, data: { confirm: "Are you sure" }, class:"btn btn-danger" %>
+</div>
